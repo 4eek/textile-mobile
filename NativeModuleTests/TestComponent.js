@@ -1,3 +1,5 @@
+import React from 'react'
+
 const ForbiddenKeywords = ['testPassed', 'testTimedOut', 'runMethod'];
 
 class TestComponent extends React.Component {

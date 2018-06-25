@@ -61,6 +61,10 @@
 		937C35AE2081797700F06ADB /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 937C35A62081794C00F06ADB /* libRNDeviceInfo.a */; };
 		937FC5412061B7A700357ED5 /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 937FC51E2061B79100357ED5 /* libRCTCameraRoll.a */; };
 		9382834320DAE2E1002C2FE2 /* TextileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9382830520DAE2E1002C2FE2 /* TextileNode.m */; };
+		9382860620E18F42002C2FE2 /* TextileRCTBridgeTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9382860520E18F42002C2FE2 /* TextileRCTBridgeTestCase.m */; };
+		9382864C20E19156002C2FE2 /* libRCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9382864920E19135002C2FE2 /* libRCTTest.a */; };
+		9382864E20E19266002C2FE2 /* TextileRCTTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9382864D20E19266002C2FE2 /* TextileRCTTestUtils.m */; };
+		9382865020E19546002C2FE2 /* TextileNodeTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9382864F20E19546002C2FE2 /* TextileNodeTestCase.m */; };
 		93D83F9D206C22B500522EFE /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D83F9A206C229B00522EFE /* libRCTPushNotification.a */; };
 		94CF1FA5842247DA9BEB5C93 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8019A17A4A6F4FFB9C1C191F /* Ionicons.ttf */; };
 		94F237902F5845BC8A2BF5DF /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B81290BD6F9E43A9BCC32DFA /* MaterialCommunityIcons.ttf */; };
@@ -354,6 +358,20 @@
 			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
 			remoteInfo = RCTCameraRoll;
 		};
+		9382864820E19135002C2FE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9382864320E19134002C2FE2 /* RCTTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 580C376F1AB104AF0015E709;
+			remoteInfo = RCTTest;
+		};
+		9382864A20E19135002C2FE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9382864320E19134002C2FE2 /* RCTTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A286E1D9B047700D4039D;
+			remoteInfo = "RCTTest-tvOS";
+		};
 		93BE90A8208013820070C615 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0380B902F95C4039A0E53E27 /* RNFS.xcodeproj */;
@@ -596,6 +614,11 @@
 		937FC5142061B79100357ED5 /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
 		9382830520DAE2E1002C2FE2 /* TextileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextileNode.m; sourceTree = "<group>"; };
 		9382834220DAE2E1002C2FE2 /* TextileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextileNode.h; sourceTree = "<group>"; };
+		9382860420E18F42002C2FE2 /* TextileRCTBridgeTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextileRCTBridgeTestCase.h; sourceTree = "<group>"; };
+		9382860520E18F42002C2FE2 /* TextileRCTBridgeTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextileRCTBridgeTestCase.m; sourceTree = "<group>"; };
+		9382864320E19134002C2FE2 /* RCTTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTTest.xcodeproj; path = "../node_modules/react-native/Libraries/RCTTest/RCTTest.xcodeproj"; sourceTree = "<group>"; };
+		9382864D20E19266002C2FE2 /* TextileRCTTestUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextileRCTTestUtils.m; sourceTree = "<group>"; };
+		9382864F20E19546002C2FE2 /* TextileNodeTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextileNodeTestCase.m; sourceTree = "<group>"; };
 		93CD61C09D4349C8A67F94F9 /* libAppCenterReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNative.a; sourceTree = "<group>"; };
 		93D83F94206C229B00522EFE /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
 		98E68F90DAB045288BB8D857 /* libRNBackgroundFetch.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNBackgroundFetch.a; sourceTree = "<group>"; };
@@ -635,6 +658,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9382864C20E19156002C2FE2 /* libRCTTest.a in Frameworks */,
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
 				6F7905A6C52A92C18D80D27C /* libPods-TextilePhotosTests.a in Frameworks */,
 			);
@@ -727,6 +751,10 @@
 			children = (
 				00E356F21AD99517003FC87E /* TextilePhotosTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
+				9382860420E18F42002C2FE2 /* TextileRCTBridgeTestCase.h */,
+				9382860520E18F42002C2FE2 /* TextileRCTBridgeTestCase.m */,
+				9382864D20E19266002C2FE2 /* TextileRCTTestUtils.m */,
+				9382864F20E19546002C2FE2 /* TextileNodeTestCase.m */,
 			);
 			path = TextilePhotosTests;
 			sourceTree = "<group>";
@@ -885,6 +913,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				9382864320E19134002C2FE2 /* RCTTest.xcodeproj */,
 				A234AAD620A67117002A118D /* RNSVG.xcodeproj */,
 				937C356F2081794C00F06ADB /* RNDeviceInfo.xcodeproj */,
 				935215BC207E966B00D46B81 /* ART.xcodeproj */,
@@ -990,6 +1019,15 @@
 			isa = PBXGroup;
 			children = (
 				937FC51E2061B79100357ED5 /* libRCTCameraRoll.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9382864420E19134002C2FE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9382864920E19135002C2FE2 /* libRCTTest.a */,
+				9382864B20E19135002C2FE2 /* libRCTTest-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1279,6 +1317,10 @@
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
 					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+				},
+				{
+					ProductGroup = 9382864420E19134002C2FE2 /* Products */;
+					ProjectRef = 9382864320E19134002C2FE2 /* RCTTest.xcodeproj */;
 				},
 				{
 					ProductGroup = 832341B11AAA6A8300B99B32 /* Products */;
@@ -1608,6 +1650,20 @@
 			remoteRef = 937FC51D2061B79100357ED5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9382864920E19135002C2FE2 /* libRCTTest.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTTest.a;
+			remoteRef = 9382864820E19135002C2FE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9382864B20E19135002C2FE2 /* libRCTTest-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTTest-tvOS.a";
+			remoteRef = 9382864A20E19135002C2FE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		93BE90A9208013820070C615 /* libRNFS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1869,7 +1925,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9382860620E18F42002C2FE2 /* TextileRCTBridgeTestCase.m in Sources */,
+				9382865020E19546002C2FE2 /* TextileNodeTestCase.m in Sources */,
 				00E356F31AD99517003FC87E /* TextilePhotosTests.m in Sources */,
+				9382864E20E19266002C2FE2 /* TextileRCTTestUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
