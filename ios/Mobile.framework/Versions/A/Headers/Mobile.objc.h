@@ -15,7 +15,6 @@
 @class MobileEvent;
 @class MobileMobile;
 @class MobileNodeConfig;
-@class MobileWrapper;
 @protocol MobileMessenger;
 @class MobileMessenger;
 
@@ -56,40 +55,6 @@ on the mobile side
  * Mobile is the name of the framework (must match package name)
  */
 @interface MobileMobile : NSObject <goSeqRefInterface> {
-}
-@property(strong, readonly) id _ref;
-
-- (instancetype)initWithRef:(id)ref;
-- (instancetype)init;
-/**
- * Create a gomobile compatible wrapper around TextileNode
- */
-- (MobileWrapper*)newNode:(MobileNodeConfig*)config messenger:(id<MobileMessenger>)messenger error:(NSError**)error;
-@end
-
-/**
- * NodeConfig is used to configure the mobile node
- */
-@interface MobileNodeConfig : NSObject <goSeqRefInterface> {
-}
-@property(strong, readonly) id _ref;
-
-- (instancetype)initWithRef:(id)ref;
-- (instancetype)init;
-- (NSString*)repoPath;
-- (void)setRepoPath:(NSString*)v;
-- (NSString*)centralApiURL;
-- (void)setCentralApiURL:(NSString*)v;
-- (NSString*)logLevel;
-- (void)setLogLevel:(NSString*)v;
-- (BOOL)logFiles;
-- (void)setLogFiles:(BOOL)v;
-@end
-
-/**
- * Wrapper is the object exposed in the frameworks
- */
-@interface MobileWrapper : NSObject <goSeqRefInterface> {
 }
 @property(strong, readonly) id _ref;
 
@@ -169,15 +134,34 @@ which is listening at it's own peer id
 @end
 
 /**
+ * NodeConfig is used to configure the mobile node
+NOTE: logLevel is one of: CRITICAL ERROR WARNING NOTICE INFO DEBUG
+ */
+@interface MobileNodeConfig : NSObject <goSeqRefInterface> {
+}
+@property(strong, readonly) id _ref;
+
+- (instancetype)initWithRef:(id)ref;
+- (instancetype)init;
+- (NSString*)repoPath;
+- (void)setRepoPath:(NSString*)v;
+- (NSString*)centralApiURL;
+- (void)setCentralApiURL:(NSString*)v;
+- (NSString*)logLevel;
+- (void)setLogLevel:(NSString*)v;
+- (BOOL)logFiles;
+- (void)setLogFiles:(BOOL)v;
+@end
+
+/**
  * tmp while central does not proxy the remote ipfs cluster
  */
 FOUNDATION_EXPORT NSString* const MobileRemoteIPFSApi;
 
 /**
- * NewNode is the mobile entry point for creating a node
-NOTE: logLevel is one of: CRITICAL ERROR WARNING NOTICE INFO DEBUG
+ * Create a gomobile compatible wrapper around TextileNode
  */
-FOUNDATION_EXPORT MobileWrapper* MobileNewNode(MobileNodeConfig* config, id<MobileMessenger> messenger, NSError** error);
+FOUNDATION_EXPORT MobileMobile* MobileNewNode(MobileNodeConfig* config, id<MobileMessenger> messenger, NSError** error);
 
 @class MobileMessenger;
 
