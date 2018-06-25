@@ -1,8 +1,12 @@
 import React from 'react'
+import {
+  NativeModules,
+  View
+} from 'react-native'
 
 const ForbiddenKeywords = ['testPassed', 'testTimedOut', 'runMethod'];
 
-class TestComponent extends React.Component {
+export default class TestComponent extends React.Component {
   componentDidMount() {
     const methodName = this.props.testName;
     const timeout = this.props.testTimeout;
@@ -47,5 +51,3 @@ class TestComponent extends React.Component {
     return <View />;
   }
 }
-
-module.exports = TestComponent;

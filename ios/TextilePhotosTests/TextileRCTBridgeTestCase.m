@@ -1,6 +1,6 @@
 #import "TextileRCTBridgeTestCase.h"
 #import <RCTTest/RCTTestRunner.h>
-#import "TextileRCTTestUtils.m"
+#import "TextileRCTTestUtils.h"
 
 NSString * const TextileTestNameKey = @"testName";
 NSString * const TextileTestTimeoutKey = @"testTimeout";

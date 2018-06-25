@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "TextileRCTBridgeTestCase.h"
+#import "TextileNode.h"
 
 @interface TextileNodeTestCase : TextileRCTBridgeTestCase
 @end
@@ -13,7 +14,7 @@
 
 - (NSString *)moduleName
 {
-  return @"LoggingBridgeTests";
+  return @"TextileNodeTests";
 }
 
 - (NSArray<id<RCTBridgeModule>> *)bridgeModules
@@ -21,8 +22,9 @@
 //  _loggingServiceMock = OCMClassMock([LoggingService class]);
 //  LoggingBridge *loggingBridge = [[LoggingBridge alloc] initWithServiec:_loggingServiceMock];
 
-//  return @[loggingBridge];
-  return @[];
+  TextileNode *node = [[TextileNode alloc] init];
+
+  return @[node];
 }
 
 #pragma mark - Tests

@@ -1,16 +1,10 @@
 #import <Foundation/Foundation.h>
+#import "TextileRCTTestUtils.h"
 
 NSString * const TextileReactNative = @"React Native";
 NSString * const TextileLocalPackagerAddress = @"http://localhost:8081";
 
 static BOOL TextileUsePackager = NO;
-
-@interface TextileRCTTestUtils: NSObject
-
-+ (void)load;
-+ (void)enablePackagerIfNeeded;
-
-@end
 
 @implementation TextileRCTTestUtils
 
