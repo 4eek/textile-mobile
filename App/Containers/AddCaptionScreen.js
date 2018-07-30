@@ -52,7 +52,7 @@ class AddCaptionScreen extends React.Component {
     this.props.navigation.setParams({
       close: () => { this.props.close() },
       submit: () => { this._share(this.state.value) },
-      submitEnabled: (text.length > 0)
+      submitEnabled: (this.state.value.length > 0)
     })
   }
 
@@ -80,7 +80,7 @@ class AddCaptionScreen extends React.Component {
               style={{height: 40}}
               value={this.state.value}
               label={this.state.value === '' ? 'Add a caption...' : ''}
-              onChangeText={this.handleNewText.bind(this)}/>
+              onChangeText={this.handleNewText.bind(this)} />
           </View>
         </View>
     )
