@@ -76,6 +76,7 @@ class AddCaptionScreen extends React.Component {
           <Text style={styles.title}>Photo caption</Text>
           <View>
             <Input
+              autoFocus
               style={{height: 40}}
               value={this.state.value}
               label={this.state.value === '' ? 'Add a caption...' : ''}

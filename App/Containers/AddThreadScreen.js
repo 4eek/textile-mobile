@@ -68,6 +68,7 @@ class AddThreadScreen extends React.Component {
           <Text style={styles.title}>New thread</Text>
           <View>
             <Input
+              autoFocus
               style={{height: 40}}
               value={this.state.value}
               label={this.state.value === '' ? 'Add a title...' : ''}
