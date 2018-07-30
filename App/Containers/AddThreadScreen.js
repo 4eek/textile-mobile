@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ScrollView, TouchableOpacity, Keyboard } from 'react-native'
 import Input from '../SB/components/Input'
 import { Button } from 'react-native-elements'
 import { NavigationActions } from 'react-navigation'
@@ -22,7 +22,15 @@ class AddThreadScreen extends React.Component {
     return {
       headerTitle: undefined,
       headerLeft: (
-        <TouchableOpacity onPress={ () => { navigation.dispatch(NavigationActions.back()) }}>
+        <TouchableOpacity onPress={ () => {
+          Keyboard.dismiss()
+          // If source is set it means we came from wallet photo detail
+          if (params.goBackRoute) {
+            navigation.dispatch(NavigationActions.navigate({routeName: params.goBackRoute}))
+          } else {
+            navigation.dispatch(NavigationActions.back())
+          }
+        }}>
           <Image
             style={navStyles.headerLeft}
             source={require('../SB/views/ThreadsDetail/statics/icon-arrow-left.png')}
@@ -44,22 +52,33 @@ class AddThreadScreen extends React.Component {
   }
 
   handleNewText = (text: string) => {
-    this.setState({ value: text})
+    const goBackRoute = this.props.navigation.state.params && this.props.navigation.state.params.source ? this.props.navigation.state.params.source : false
+    this.setState({value: text})
     this.props.navigation.setParams({
       submit: () => { this._submit() },
-      submitEnabled: (text.length > 0)
+      submitEnabled: (text.length > 0),
+      goBackRoute
     })
   }
 
   componentWillMount () {
+    console.log(this.props.navigation.state)
+    const goBackRoute = this.props.navigation.state.params && this.props.navigation.state.params.source ? this.props.navigation.state.params.source : false
     this.props.navigation.setParams({
       submit: () => { this.props.submit(this.state.value) },
-      submitEnabled: false
+      submitEnabled: false,
+      goBackRoute
     })
   }
 
   _submit () {
+    Keyboard.dismiss()
     this.props.submit(this.state.value)
+    const goBackRoute = this.props.navigation.state.params && this.props.navigation.state.params.source ? this.props.navigation.state.params.source : false
+    // If source is set it means we came from wallet photot detail
+    if (goBackRoute) {
+      this.props.navigation.dispatch(NavigationActions.navigate({routeName: goBackRoute}))
+    }
   }
 
   render () {
